@@ -52,8 +52,7 @@ public class Alerts extends PageObject {
         confirmButton.click();
         Alert alert = wait.until(alertIsPresent());
         alert.dismiss();
-        String s = result.getText();
-        if (s.equals("You selected Cancel"))
+        if (result.getText().equals("You selected Cancel"))
             return true;
         else return false;
     }
@@ -62,9 +61,7 @@ public class Alerts extends PageObject {
         confirmButton.click();
         Alert alert = wait.until(alertIsPresent());
         alert.accept();
-        String s = result.getText();
-
-        if (s.equals("You selected Ok"))
+        if (result.getText().equals("You selected Ok"))
             return true;
         else return false;
     }

@@ -13,7 +13,6 @@ public class AlertsTest extends Config {
         Alerts alerts = new Alerts(driver);
         Assert.assertTrue(alerts.cancelAlert());
         Assert.assertTrue(alerts.acceptAlert());
-
     }
     @Test
     public static void testAlertButton(){

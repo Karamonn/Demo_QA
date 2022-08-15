@@ -8,19 +8,19 @@ import org.openqa.selenium.support.FindBy;
 
 public class Email extends PageObject {
 
-    @FindBy (css = "[ id = 'userName']")
+    @FindBy(css = "[ id = 'userName']")
     private static WebElement nameField;
 
-    @FindBy (xpath = "//input [@class = 'mr-sm-2 form-control']")
+    @FindBy(xpath = "//input [@class = 'mr-sm-2 form-control']")
     private WebElement email;
 
-    @FindBy (id = "currentAddress")
+    @FindBy(id = "currentAddress")
     private WebElement curAddress;
 
-    @FindBy (id = "permanentAddress")
+    @FindBy(id = "permanentAddress")
     private WebElement perAddress;
 
-    @FindBy (id = "submit")
+    @FindBy(id = "submit")
     private WebElement sub;
 
     @FindBy(xpath = "//p [@id = 'email']")
@@ -31,21 +31,21 @@ public class Email extends PageObject {
         super(driver);
     }
 
-    public boolean isIni(){
+    public boolean isIni() {
         return nameField.isDisplayed();
     }
 
-    public void enterName(String name){
+    public void enterName(String name) {
         this.nameField.clear();
         this.nameField.sendKeys(name);
     }
 
-    public void enterEmail (String name){
+    public void enterEmail(String name) {
         this.email.clear();
         this.email.sendKeys(name);
     }
 
-    public void address (String current, String permanent){
+    public void address(String current, String permanent) {
         this.curAddress.clear();
         this.curAddress.sendKeys(current);
 
